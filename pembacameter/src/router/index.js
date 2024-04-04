@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Router from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ContactView from '../views/Contact.vue'
 import Register from '../views/RegisterView.vue'
@@ -10,7 +10,7 @@ import NolanggView from '../views/NolanggView.vue'
 import RiwayatView from '../views/RiwayatView.vue'
 
 
-Vue.use(VueRouter)
+Vue.use(Router)
 
 const routes = [
   {
@@ -55,7 +55,7 @@ const routes = [
   }
 ]
 
-const router = new VueRouter({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
