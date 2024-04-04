@@ -5,7 +5,7 @@
     </div>
     <div class="col">
        <div class="row justify-content-start align-items-center mb-5">
-      <img src="../assets/Group 2.png">
+      <!-- <img src="../assets/Group 2.png"> -->
       <div class="col">
       <h4 class="poppins-semibold" style="color:#107EFF;">Perumda Air Minum Tirta Moedal</h4>
       <h5 class="poppins-regular">Kota Semarang</h5>

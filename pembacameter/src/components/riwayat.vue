@@ -67,8 +67,8 @@
           <td style="padding: 10px; display: flex;">
             <router-link :to="'/Edit/' + pel.nolangg">
               <button class="btn btn-md btn-success mr-1" v-if="pel.canEdit" @click="editData(pel.nolangg)"><i class="fa-solid fa-pen-to-square"></i></button>
-            </router-link>
-            <button class="btn btn-md btn-danger ml-1" @click="deleteConfirm(pel.nolangg)"><i class="fa-solid fa-trash"></i></button>
+            </router-link>  
+            <button class="btn btn-primary btn-sm">View Data</button>
           </td>
         </tr>
       </tbody>

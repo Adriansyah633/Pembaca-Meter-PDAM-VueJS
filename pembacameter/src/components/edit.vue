@@ -64,7 +64,7 @@
         </div>
         <div class="row align-items-center">
           <div class="col-md-4">
-            <label for="nolangg" class="poppins-semibold">DISM</label>
+            <label for="dism" class="poppins-semibold">DISM</label>
           </div>
           <div class="col-md-8">
             <div class="input">
@@ -82,7 +82,7 @@
         </div>
         <div class="row align-items-center">
           <div class="col-md-4">
-            <label for="nolangg" class="poppins-semibold">Lalu</label>
+            <label for="lalu" class="poppins-semibold">Lalu</label>
           </div>
           <div class="col-md-8">
             <div class="input">
@@ -99,7 +99,7 @@
         </div>
         <div class="row align-items-center">
           <div class="col-md-4">
-            <label for="nolangg" class="poppins-semibold">Periode</label>
+            <label for="periode" class="poppins-semibold">Periode</label>
           </div>
           <div class="col-md-8">
             <div class="input">
@@ -117,7 +117,7 @@
         </div>
         <div class="row align-items-center">
           <div class="col-md-4">
-            <label for="nolangg" class="poppins-semibold">Status Data</label>
+            <label for="dt" class="poppins-semibold">Status Data</label>
           </div>
           <div class="col-md-8">
             <div class="input">
@@ -138,7 +138,7 @@
         <!-- Kolom untuk Status Data -->
         <div class="row align-items-center">
           <div class="col-md-4">
-            <label for="st" class="poppins-semibold">Kini</label>
+            <label for="kini" class="poppins-semibold">Kini</label>
           </div>
           <div class="col-md-8">
             <div class="input">
@@ -155,7 +155,7 @@
         </div>
         <div class="row align-items-center">
           <div class="col-md-4">
-            <label for="st" class="poppins-semibold">Keterangan</label>
+            <label for="kt" class="poppins-semibold">Keterangan</label>
           </div>
           <div class="col-md-8">
             <div class="input">
@@ -177,8 +177,7 @@
           <div class="col-md-8">
             <div class="input">
               <select v-model="st" class="form-control">
-              <option value="">Pilih Status Meter</option>
-              <option v-for="all_status_meter in all_status_meter" :key="all_status_meter.kode" :value="all_status_meter.status">{{ all_status_meter.status }}</option>
+              <option v-for="all_status_meter in all_status_meter" :key="all_status_meter.kode" :value="all_status_meter.status">{{all_status_meter.kode}} {{ all_status_meter.status }}</option>
               </select>
             </div>
           </div>
@@ -286,7 +285,8 @@ export default {
           this.dism = result.data.dism;
           this.lalu = result.data.lalu;
           this.dt = result.data.status_baca.nm_status;
-          this.st = result.data.status_meter.status;
+          const selectedStatusMeter = result.data.status_meter.status;
+          this.st = selectedStatusMeter;
           this.periode = result.data.periode;
           this.status_meter = result.data.status_meter.status;
           this.all_status_meter = result.data.all_status_meter;

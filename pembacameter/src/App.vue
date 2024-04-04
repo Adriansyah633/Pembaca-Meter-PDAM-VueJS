@@ -7,6 +7,7 @@
 
 <script>
 
+
 export default {
   name: 'App',
   data(){
@@ -28,7 +29,8 @@ export default {
       localStorage.removeItem('status')
       localStorage.removeItem('token')
     }
-  }
+  },
+  
 }
 </script>
 
